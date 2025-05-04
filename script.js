@@ -10,7 +10,7 @@ timeEL.textContent = now.toLocaleTimeString()
 
 setInterval(updateClock, 1000);
 
-fetch("http://api.weatherapi.com/v1/current.json?key=537e34532be34dc6bab164914251004&q=Bangladesh").then((resp) => resp.json()).then((data) => {document.getElementById("weatherInfo").textContent = `${data.location.name} ${data.current.temp_c} deg C, ${data.current.condition.text}`}).catch(err => {
+fetch("https://api.weatherapi.com/v1/current.json?key=537e34532be34dc6bab164914251004&q=Bangladesh").then((resp) => resp.json()).then((data) => {document.getElementById("weatherInfo").textContent = `${data.location.name} ${data.current.temp_c} deg C, ${data.current.condition.text}`}).catch(err => {
     document.getElementById("weatherInfo").textContent = "give proper name"
 });
 
